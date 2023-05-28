@@ -5,6 +5,10 @@ using UnityEngine;
 
 public static class Utils
 {
+    public static bool Between(float value, float min, float max)
+    {
+        return min < value && value < max;
+    }
     public static float Map(float value, float fromMin, float fromMax, float toMin, float toMax)
     {
         float ratio = (value - fromMin) / (fromMax - fromMin);

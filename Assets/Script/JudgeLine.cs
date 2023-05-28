@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class JudgeLine : MonoBehaviour
 {
+    private bool isActive = true;
     private int vertexCount = 50;
     private LineRenderer lineRenderer;
     
+    public System.Action onTimeover;
     public float elapsedTime {get; private set;}
 
     // Start is called before the first frame update
@@ -16,11 +18,13 @@ public class JudgeLine : MonoBehaviour
         lineRenderer.positionCount = vertexCount + 1;
 
         elapsedTime = -1f;
+        isActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!isActive) return;
         elapsedTime += Time.deltaTime;
 
         // Draw circle
@@ -28,7 +32,12 @@ public class JudgeLine : MonoBehaviour
         float alpha = Utils.ClampedMap(elapsedTime, -1f, 0f, 0.2f, 1f);
         Utils.DrawCircle(lineRenderer, scale);
         SetAlpha(alpha);
-        if(elapsedTime > 0.4f) Destroy(gameObject);
+        if(elapsedTime > 0.4f) 
+        {
+            Destroy(gameObject);
+            onTimeover?.Invoke();
+            isActive = false;
+        }
     }
     void SetAlpha(float alpha)
     {
@@ -39,5 +48,19 @@ public class JudgeLine : MonoBehaviour
             new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
         );
         lineRenderer.colorGradient = grad;
+    }
+    public void Delete()
+    {
+        isActive = false;
+        Destroy(gameObject);
+    }
+    public Judgement JudgeTiming()
+    {
+        float perfect = Constants.PERFECT_TIMING;
+        float good = Constants.GOOD_TIMING;
+        if(Utils.Between(elapsedTime, -perfect, perfect)) return Judgement.perfect;
+        if(Utils.Between(elapsedTime, -good, good)) return Judgement.good;
+        if(elapsedTime < -good) return Judgement.early;
+        return Judgement.late;
     }
 }
