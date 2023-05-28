@@ -34,8 +34,6 @@ public class MusicManager : Singletone, IMusicManager
         if(isBossLevel) currentMusicManager = bossMusicManager;
         else currentMusicManager = stageMusicManager;
         currentMusicManager?.LoadBGMData((stageNo-1) / 2 + 1);
-
-        Debug.Log(currentMusicManager);
     }
 
     public void StartMusic()

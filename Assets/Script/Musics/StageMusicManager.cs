@@ -32,7 +32,7 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
 
         MakeBeatEvent(prevElapsedTime, elapsedTime);
         MakeNoteEvent(prevElapsedTime, elapsedTime);
-        if(!audioRunner.isPlaying) isRunning = false;
+        if(elapsedTime > 0f && !audioRunner.isPlaying) isRunning = false;
     }
 
     public void LoadBGMData(int stageNo)
@@ -75,9 +75,12 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
     {
         float bpm = currentSource.bpm;
         float delay = 1f;
+        
+        if(IsMusicStampEnd(curTime + delay)) return;
         int prevBeatNo = GetBeatNo(prevTime + delay, bpm);
         int curBeatNo = GetBeatNo(curTime + delay, bpm);
         if(curBeatNo < 0) return;
+
         if(prevBeatNo != curBeatNo && currentSource.HasNote(curBeatNo)) noteEvent?.Invoke();
     }
 
@@ -86,6 +89,12 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
         yield return new WaitForSeconds(delaySec);
         audioRunner.clip = currentSource.audioClip;
         audioRunner.Play();
+    }
+
+    private bool IsMusicStampEnd(float time)
+    {
+        if(currentSource == null) return true;
+        return (time + currentSource.offset) > currentSource.audioClip.length;
     }
 
     private int GetBeatNo(float time, float bpm)

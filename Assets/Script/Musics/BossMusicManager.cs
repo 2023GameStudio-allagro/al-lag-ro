@@ -44,7 +44,7 @@ public class BossMusicManager : MonoBehaviour, IMusicManager
 
     void HandleAudio()
     {
-        if(audioRunner.isPlaying) return;
+        if(elapsedPhaseTime.time <= 0f || audioRunner.isPlaying) return;
         phase++;
         phaseEndEvent?.Invoke();
         if(phase >= currentSource.phases)
