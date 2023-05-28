@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfac7527a8e645742a200d7892057c29, type: 3}
+  m_Name: DemoMusic
+  m_EditorClassIdentifier: 
+  bpm: 135
+  offset: 0.4
+  audioClip: {fileID: 8300000, guid: c82cf379b3468854f8498c7a3f14054b, type: 3}
+  notePattern: o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o...o.......o.......o.......o.......o.......o.o.o.o.o.......o.......o.......o.......o.......o.......o.......o.o.o.o.o.o.o.o.o.o.o...o.......o.o.o.o.o.o.o.o.o.o.o...o.......o.......o.......o.......o.......o.......o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o...o.......o.......o.......o.......o.......o.o.o.o.o.......o.......o.......o.......o.......o.......o.......o.o.o.o.o.o.o.o.o.o.o...o.......o.o.o.o.o.o.o.o.o.o.o...o.......o.......o.......o.......o.......o.......o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o.o...
