@@ -66,15 +66,28 @@ public class Player : MonoBehaviour
         switch(judgement)
         {
             case Judgement.perfect:
+                CastAttack(2);
                 Debug.Log("perfect attacked!");
                 break;
             case Judgement.good:
+                CastAttack(1);
                 Debug.Log("good attacked!");
                 break;
             default:
                 SetStun(Constants.STUN_DURATION);
                 Debug.Log("missed!");
                 break;
+        }
+    }
+
+    void CastAttack(int power)
+    {
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(rigid.position, Constants.ATTACK_RADIUS, Vector2.zero, 0f, 1 << Constants.ENEMY_LAYER);
+        foreach(RaycastHit2D hit in hits)
+        {
+            Debug.Log(hit);
+            IAttackable attackable = hit.collider?.GetComponent<IAttackable>();
+            if(attackable != null) attackable.Damage(power);
         }
     }
 
