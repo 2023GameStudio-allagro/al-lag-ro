@@ -49,7 +49,10 @@ public class Player : MonoBehaviour
 
     InputCommand GetInputCommand()
     {
-        if(Input.GetKeyDown(KeyCode.Q)) return new InputCommand(CommandKey.q);
+        if(Input.GetKeyDown(KeyCode.Z)) return new InputCommand(AttackKey.z);
+        if(Input.GetKeyDown(KeyCode.X)) return new InputCommand(AttackKey.x);
+        if(Input.GetKeyDown(KeyCode.C)) return new InputCommand(AttackKey.c);
+        if(Input.GetKeyDown(KeyCode.V)) return new InputCommand(AttackKey.v);
         return null;
     }
 
@@ -66,11 +69,11 @@ public class Player : MonoBehaviour
         switch(judgement)
         {
             case Judgement.perfect:
-                CastAttack(2);
+                CastAttack(2, command.keys);
                 Debug.Log("perfect attacked!");
                 break;
             case Judgement.good:
-                CastAttack(1);
+                CastAttack(1, command.keys);
                 Debug.Log("good attacked!");
                 break;
             default:
@@ -80,14 +83,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    void CastAttack(int power)
+    void CastAttack(int power, AttackKey keys)
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(rigid.position, Constants.ATTACK_RADIUS, Vector2.zero, 0f, 1 << Constants.ENEMY_LAYER);
         foreach(RaycastHit2D hit in hits)
         {
-            Debug.Log(hit);
             IAttackable attackable = hit.collider?.GetComponent<IAttackable>();
-            if(attackable != null) attackable.Damage(power);
+            if(attackable != null && attackable.CanDamage(keys)) attackable.Damage(power);
         }
     }
 

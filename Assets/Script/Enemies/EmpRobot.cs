@@ -8,7 +8,7 @@ public class EmpRobot : EnemyBase
     protected override void Start()
     {
         base.Start();
-        hp = 3;
+        SetHP(4);
         moveSpeed = 2;
     }
 }
