@@ -9,5 +9,6 @@ public class EmpRobot : EnemyBase
     {
         base.Start();
         hp = 3;
+        moveSpeed = 2;
     }
 }
