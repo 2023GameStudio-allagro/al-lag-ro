@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Singletone : MonoBehaviour
+public class Singletone<T> : MonoBehaviour where T : MonoBehaviour
 {
-    private static Singletone instance;
-    public static Singletone Instance{ get { return instance; } }
+    private static T instance;
+    public static T Instance{ get { return instance; } }
 
     private void Awake()
     {
         if (instance != null && instance != this) Destroy(gameObject);
-        else instance = this;
+        else instance = this as T;
     }
 }
