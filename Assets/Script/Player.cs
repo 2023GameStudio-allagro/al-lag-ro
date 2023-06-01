@@ -1,27 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    private float stunDuration = 0f;
+    private TemporalStatus stun = new TemporalStatus();
+    private TemporalStatus invincible = new TemporalStatus();
 
     private Rigidbody2D rigid;
     private JudgeLineCreator judgeSystem;
 
     public float moveSpeed = 5f;
-    public bool stun
+    public UnityEvent<int> onHealthChanged;
+    public int health {get; private set;}
+    public bool isStunned
     {
         get
         {
-            return stunDuration > 0f;
+            return stun.ToBool();
         }
+    }
+
+    void Awake()
+    {
+        health = Constants.MAX_HEALTH;
+        rigid = GetComponent<Rigidbody2D>();
+        judgeSystem = GetComponentInChildren<JudgeLineCreator>();
     }
 
     void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
-        judgeSystem = GetComponentInChildren<JudgeLineCreator>();
+    }
+
+    void OnStageChanged()
+    {
+        health = Constants.MAX_HEALTH;
     }
 
     // Update is called once per frame
@@ -32,7 +46,8 @@ public class Player : MonoBehaviour
             InputCommand command = GetInputCommand();
             if(command != null) Attack(command);
         }
-        else DiminishStunDuration();
+        stun.Update();
+        invincible.Update();
     }
 
     void FixedUpdate()
@@ -45,6 +60,17 @@ public class Player : MonoBehaviour
         else velocity = new Vector2(horizontal, vertical);
 
         Move(velocity);
+    }
+
+    public void ChangeHealth(int healthDelta)
+    {
+        if(healthDelta == 0) return;
+        this.health += healthDelta;
+        if(this.health < 0)
+        {
+            this.health = 0;
+        }
+        onHealthChanged?.Invoke(this.health);
     }
 
     InputCommand GetInputCommand()
@@ -77,12 +103,11 @@ public class Player : MonoBehaviour
                 Debug.Log("good attacked!");
                 break;
             default:
-                SetStun(Constants.STUN_DURATION);
+                stun.Activate(Constants.STUN_DURATION);
                 Debug.Log("missed!");
                 break;
         }
     }
-
     void CastAttack(int power, AttackKey keys)
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(rigid.position, Constants.ATTACK_RADIUS, Vector2.zero, 0f, 1 << Constants.ENEMY_LAYER);
@@ -92,16 +117,10 @@ public class Player : MonoBehaviour
             if(attackable != null && attackable.CanDamage(keys)) attackable.Damage(power);
         }
     }
-
-    void SetStun(float duration)
+    public void Hit(int damage)
     {
-        stunDuration = duration;
-    }
-
-    void DiminishStunDuration()
-    {
-        if(!stun) return;
-        stunDuration -= Time.deltaTime;
-        if(stunDuration < 0f) stunDuration = 0f;
+        if(invincible) return;
+        ChangeHealth(-damage);
+        invincible.Activate(Constants.INVINCIBLE_DURATION);
     }
 }

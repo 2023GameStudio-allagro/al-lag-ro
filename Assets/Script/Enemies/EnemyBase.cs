@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBase : MonoBehaviour, IAttackable
+public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
 {
     private Animator animator;
     private Rigidbody2D rigid;
@@ -30,6 +30,7 @@ public class EnemyBase : MonoBehaviour, IAttackable
             return _markers.hp;
         }
     }
+    public int attackPower{get{return 1;}}
     public int moveSpeed{get; protected set;}
 
     [SerializeField] private GameObject player;
@@ -60,6 +61,12 @@ public class EnemyBase : MonoBehaviour, IAttackable
     protected virtual void FixedUpdate()
     {
         MoveTowardPlayer();
+    }
+
+    public virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        Player player = other.GetComponent<Player>();
+        if(player != null) AttackPlayer(player);
     }
 
     protected void MoveTowardPlayer()
@@ -93,6 +100,10 @@ public class EnemyBase : MonoBehaviour, IAttackable
         markUI.SetMarker(markers);
         animator?.SetTrigger("hit");
         if(hp == 0) OnDead();
+    }
+    public void AttackPlayer(Player player)
+    {
+        player.Hit(this.attackPower);
     }
 
     protected virtual void OnDead()
