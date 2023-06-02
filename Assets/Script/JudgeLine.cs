@@ -32,7 +32,7 @@ public class JudgeLine : MonoBehaviour
         float alpha = Utils.ClampedMap(elapsedTime, -1f, 0f, 0.2f, 1f);
         Utils.DrawCircle(lineRenderer, scale);
         SetAlpha(alpha);
-        if(elapsedTime > 0.4f) 
+        if(elapsedTime > Constants.GOOD_TIMING) 
         {
             Destroy(gameObject);
             onTimeover?.Invoke();

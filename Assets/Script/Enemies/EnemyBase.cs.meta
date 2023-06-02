@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 48e56085596cc1e4f97bedf1d4eb212f
+guid: b017db4f40ad7be44b5529004e31eb14
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - judgeLineBase: {fileID: 3965433767922729628, guid: 766fa0a13cc9a15409cb271b33c80397,
+  - player: {instanceID: 0}
+  - markUIPrefab: {fileID: 1099512028321634194, guid: 454a9cc8284921042b2cf6e504bc67c9,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

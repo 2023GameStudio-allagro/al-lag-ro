@@ -6,10 +6,6 @@ public enum CommandType
 {
     single, multi, hold
 }
-public enum CommandKey
-{
-    q, w, e, r
-}
 public enum CommandPhase
 {
     start, hold, end
@@ -18,20 +14,24 @@ public enum CommandPhase
 public class InputCommand
 {
     public CommandType type {get; private set;}
-    public List<CommandKey> keys {get; private set;}
+    public AttackKey keys {get; private set;}
     public CommandPhase phase {get; private set;}
 
-    public InputCommand(CommandKey key)
+    public InputCommand(AttackKey key)
     {
         this.type = CommandType.single;
-        this.keys = new List<CommandKey>{key};
+        this.keys = key;
         this.phase = CommandPhase.start;
     }
 
-    public InputCommand(CommandType type, List<CommandKey> keys, CommandPhase phase)
+    public InputCommand(CommandType type, List<AttackKey> keys, CommandPhase phase)
     {
         this.type = type;
-        this.keys = keys;
+        this.keys = AttackKey.none;
         this.phase = phase;
+        foreach(AttackKey key in keys)
+        {
+            this.keys |= key;
+        }
     }
 }

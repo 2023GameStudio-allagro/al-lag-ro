@@ -6,9 +6,9 @@ using UnityEngine.Events;
 public class StageMusicManager : MonoBehaviour, IMusicManager
 {
     private UnityEvent sharedNoteEvent;
-    private UnityEvent sharedBeatEvent;
+    private UnityEvent<int> sharedBeatEvent;
     public UnityEvent noteEvent { get {return sharedNoteEvent;} }
-    public UnityEvent beatEvent { get {return sharedBeatEvent;} }
+    public UnityEvent<int> beatEvent { get {return sharedBeatEvent;} }
 
     [SerializeField] private StageMusicSource[] sources;
     private StageMusicSource currentSource;
@@ -55,7 +55,7 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
         audioRunner.Stop();
     }
 
-    public void SetSharedEvent(UnityEvent note, UnityEvent beat)
+    public void SetSharedEvent(UnityEvent note, UnityEvent<int> beat)
     {
         sharedNoteEvent = note;
         sharedBeatEvent = beat;
@@ -67,8 +67,8 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
         int prevBeatNo = GetBeatNo(prevTime, bpm);
         int curBeatNo = GetBeatNo(curTime, bpm);
         if(curBeatNo < 0) return;
-        if(prevBeatNo < 0 && curBeatNo >= 0) beatEvent?.Invoke();
-        else if(prevBeatNo/4 != curBeatNo/4) beatEvent?.Invoke();
+        if(prevBeatNo < 0 && curBeatNo >= 0) beatEvent?.Invoke(0);
+        else if(prevBeatNo/4 != curBeatNo/4) beatEvent?.Invoke(curBeatNo/4);
     }
 
     private void MakeNoteEvent(float prevTime, float curTime)

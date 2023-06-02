@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MusicManager : Singletone, IMusicManager
+public class MusicManager : Singletone<MusicManager>, IMusicManager
 {
     public UnityEvent _noteEvent = new UnityEvent();
-    public UnityEvent _beatEvent = new UnityEvent();
+    public UnityEvent<int> _beatEvent = new UnityEvent<int>();
     public UnityEvent noteEvent { get {return _noteEvent;} }
-    public UnityEvent beatEvent { get {return _beatEvent;} }
+    public UnityEvent<int> beatEvent { get {return _beatEvent;} }
 
     private IMusicManager currentMusicManager;
     private StageMusicManager stageMusicManager;
