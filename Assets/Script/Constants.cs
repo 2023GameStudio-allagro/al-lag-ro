@@ -16,4 +16,14 @@ public static class Constants
     public static readonly float ATTACK_RADIUS = 3f;
 
     public static readonly int ENEMY_LAYER = 9;
+
+    public static readonly string NORMAL_ENEMY = "normal";
+    public static readonly string FAST_ENEMY = "fast";
+    public static readonly string TANK_ENEMY = "tank";
+    public static readonly string ULTRAFAST_ENEMY = "ultrafast";
+
+    public static readonly string[] SPAWN_PATTERN_RESOURCES = 
+    {
+        "enemyPatternStage1.json"
+    };
 }

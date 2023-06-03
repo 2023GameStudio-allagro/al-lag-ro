@@ -56,7 +56,6 @@ public class ScoreManager : Singletone<ScoreManager>, IScoreManager
     public void Miss()
     {
         combo = 0;
-        score -= 5;
     }
     public void GetDamagedByEnemy()
     {

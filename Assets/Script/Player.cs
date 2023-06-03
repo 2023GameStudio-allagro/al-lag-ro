@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     private TemporalStatus stun = new TemporalStatus();
     private TemporalStatus invincible = new TemporalStatus();
 
+    private SpriteRenderer sprite;
+    private Animator animator;
     private Rigidbody2D rigid;
     private JudgeLineCreator judgeSystem;
     private IScoreManager scoreManager;
@@ -26,6 +28,8 @@ public class Player : MonoBehaviour
     void Awake()
     {
         health = Constants.MAX_HEALTH;
+        sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         judgeSystem = GetComponentInChildren<JudgeLineCreator>();
         scoreManager = ScoreManager.Instance;
@@ -50,6 +54,7 @@ public class Player : MonoBehaviour
         }
         stun.Update();
         invincible.Update();
+        SetAnimation();
     }
 
     void FixedUpdate()
@@ -116,6 +121,7 @@ public class Player : MonoBehaviour
         foreach(RaycastHit2D hit in hits)
         {
             IAttackable attackable = hit.collider?.GetComponent<IAttackable>();
+            Debug.Log(attackable);
             if(attackable != null && attackable.CanDamage(keys))
             {
                 hitCount++;
@@ -124,6 +130,7 @@ public class Player : MonoBehaviour
         }
         if(power > 1) scoreManager?.HitEnemyPerfect(hitCount);
         else scoreManager?.HitEnemy(hitCount);
+        animator.SetTrigger("attack");
     }
     public void Hit(int damage)
     {
@@ -131,5 +138,14 @@ public class Player : MonoBehaviour
         ChangeHealth(-damage);
         scoreManager?.GetDamagedByEnemy();
         invincible.Activate(Constants.INVINCIBLE_DURATION);
+        animator.SetTrigger("hit");
+    }
+    private void SetAnimation()
+    {
+        Vector2 movement = rigid.velocity;
+        if(!Mathf.Approximately(movement.x, 0.0f)) sprite.flipX = (movement.x < 0f);
+        animator.SetFloat("moveSpeed", movement.magnitude);
+        if(stun) animator.SetBool("stun", true);
+        else animator.SetBool("stun", false);
     }
 }
