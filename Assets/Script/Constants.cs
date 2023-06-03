@@ -9,7 +9,7 @@ public static class Constants
 
     public const float PERFECT_TIMING = 0.15f;
     public const float GOOD_TIMING = 0.3f;
-    public const float STUN_DURATION = 1f;
+    public const float STUN_DURATION = 0.3f;
     public const float INVINCIBLE_DURATION = 0.3f;
 
     public const int MAX_HEALTH = 3;

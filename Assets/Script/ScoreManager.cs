@@ -41,12 +41,12 @@ public class ScoreManager : Singletone<ScoreManager>, IScoreManager
     public void HitEnemy(int count)
     {
         combo += count;
-        score += count * combo * 10;
+        score += count * combo * 50;
     }
     public void HitEnemyPerfect(int count)
     {
         combo += count;
-        score += count * combo * 10;
+        score += count * combo * 50;
     }
     public void AttackWrongTime()
     {
@@ -60,7 +60,7 @@ public class ScoreManager : Singletone<ScoreManager>, IScoreManager
     public void GetDamagedByEnemy()
     {
         combo = 0;
-        score -= 1000;
+        score -= 500;
     }
     private void InitializeScore()
     {
