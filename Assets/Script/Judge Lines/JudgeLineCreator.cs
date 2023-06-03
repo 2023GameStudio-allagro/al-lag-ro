@@ -46,5 +46,6 @@ public class JudgeLineCreator : MonoBehaviour
     private void TimeoverNote()
     {
         noteQueue.Dequeue();
+        ScoreManager.Instance?.Miss();
     }
 }

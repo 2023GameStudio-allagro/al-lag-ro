@@ -8,8 +8,11 @@ public class Player : MonoBehaviour
     private TemporalStatus stun = new TemporalStatus();
     private TemporalStatus invincible = new TemporalStatus();
 
+    private SpriteRenderer sprite;
+    private Animator animator;
     private Rigidbody2D rigid;
     private JudgeLineCreator judgeSystem;
+    private IScoreManager scoreManager;
 
     public float moveSpeed = 5f;
     public UnityEvent<int> onHealthChanged;
@@ -25,8 +28,11 @@ public class Player : MonoBehaviour
     void Awake()
     {
         health = Constants.MAX_HEALTH;
+        sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         judgeSystem = GetComponentInChildren<JudgeLineCreator>();
+        scoreManager = ScoreManager.Instance;
     }
 
     void Start()
@@ -48,6 +54,7 @@ public class Player : MonoBehaviour
         }
         stun.Update();
         invincible.Update();
+        SetAnimation();
     }
 
     void FixedUpdate()
@@ -96,31 +103,48 @@ public class Player : MonoBehaviour
         {
             case Judgement.perfect:
                 CastAttack(2, command.keys);
-                Debug.Log("perfect attacked!");
                 break;
             case Judgement.good:
                 CastAttack(1, command.keys);
-                Debug.Log("good attacked!");
                 break;
             default:
                 stun.Activate(Constants.STUN_DURATION);
-                Debug.Log("missed!");
+                scoreManager?.AttackWrongTime();
                 break;
         }
     }
     void CastAttack(int power, AttackKey keys)
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(rigid.position, Constants.ATTACK_RADIUS, Vector2.zero, 0f, 1 << Constants.ENEMY_LAYER);
+        
+        int hitCount = 0;
         foreach(RaycastHit2D hit in hits)
         {
             IAttackable attackable = hit.collider?.GetComponent<IAttackable>();
-            if(attackable != null && attackable.CanDamage(keys)) attackable.Damage(power);
+            if(attackable != null && attackable.CanDamage(keys))
+            {
+                hitCount++;
+                attackable.Damage(power);
+            }
         }
+        if(power > 1) scoreManager?.HitEnemyPerfect(hitCount);
+        else scoreManager?.HitEnemy(hitCount);
+        animator.SetTrigger("attack");
     }
     public void Hit(int damage)
     {
         if(invincible) return;
         ChangeHealth(-damage);
+        scoreManager?.GetDamagedByEnemy();
         invincible.Activate(Constants.INVINCIBLE_DURATION);
+        animator.SetTrigger("hit");
+    }
+    private void SetAnimation()
+    {
+        Vector2 movement = rigid.velocity;
+        if(!Mathf.Approximately(movement.x, 0.0f)) sprite.flipX = (movement.x < 0f);
+        animator.SetFloat("moveSpeed", movement.magnitude);
+        if(stun) animator.SetBool("stun", true);
+        else animator.SetBool("stun", false);
     }
 }

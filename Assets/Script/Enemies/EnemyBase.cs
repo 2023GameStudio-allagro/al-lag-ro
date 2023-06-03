@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
 {
+    private SpriteRenderer sprite;
     private Animator animator;
     private Rigidbody2D rigid;
     private MarkerList _markers;
@@ -31,13 +32,14 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
         }
     }
     public int attackPower{get{return 1;}}
-    public int moveSpeed{get; protected set;}
+    public float moveSpeed{get; protected set;}
 
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject markUIPrefab;
 
     protected virtual void Awake()
     {
+        sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         GameObject markUIObject = Instantiate(markUIPrefab);
@@ -55,7 +57,7 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
     // Update is called once per frame
     protected virtual void Update()
     {
-        
+        SetAnimation();
     }
 
     protected virtual void FixedUpdate()
@@ -78,12 +80,22 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
         rigid.velocity = velocity;
     }
 
+    protected virtual void SetAnimation()
+    {
+        Vector2 movement = rigid.velocity;
+        if(!Mathf.Approximately(movement.x, 0.0f)) sprite.flipX = (movement.x < 0f);
+    }
+
+
     public void SetHP(int maxHP)
     {
         _markers = new MarkerList(maxHP);
         markUI.SetInitialMarker(markers);
     }
-
+    public void SetSpeed(float speed)
+    {
+        moveSpeed = speed;
+    }
     public void SetPlayer(GameObject player)
     {
         this.player = player;
@@ -98,7 +110,8 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
     {
         _markers.Decrease(damage);
         markUI.SetMarker(markers);
-        animator?.SetTrigger("hit");
+        if(damage > 1) animator?.SetTrigger("critHit");
+        else animator?.SetTrigger("hit");
         if(hp == 0) OnDead();
     }
     public void AttackPlayer(Player player)

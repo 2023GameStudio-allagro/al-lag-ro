@@ -4,16 +4,26 @@ using UnityEngine;
 
 public static class Constants
 {
-    public static readonly float JUDGE_LINE_SIZE = 3f;
-    public static readonly float JUDGE_BASE_SIZE = 0.3f;
+    public const float JUDGE_LINE_SIZE = 3f;
+    public const float JUDGE_BASE_SIZE = 0.3f;
 
-    public static readonly float PERFECT_TIMING = 0.15f;
-    public static readonly float GOOD_TIMING = 0.3f;
-    public static readonly float STUN_DURATION = 1f;
-    public static readonly float INVINCIBLE_DURATION = 0.3f;
+    public const float PERFECT_TIMING = 0.15f;
+    public const float GOOD_TIMING = 0.3f;
+    public const float STUN_DURATION = 0.3f;
+    public const float INVINCIBLE_DURATION = 0.3f;
 
-    public static readonly int MAX_HEALTH = 3;
-    public static readonly float ATTACK_RADIUS = 3f;
+    public const int MAX_HEALTH = 3;
+    public const float ATTACK_RADIUS = 3f;
 
-    public static readonly int ENEMY_LAYER = 9;
+    public const int ENEMY_LAYER = 9;
+
+    public const string NORMAL_ENEMY = "normal";
+    public const string FAST_ENEMY = "fast";
+    public const string TANK_ENEMY = "tank";
+    public const string ULTRAFAST_ENEMY = "ultrafast";
+
+    public static readonly string[] SPAWN_PATTERN_RESOURCES = 
+    {
+        "enemyPatternStage1"
+    };
 }
