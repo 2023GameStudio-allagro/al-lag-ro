@@ -121,7 +121,6 @@ public class Player : MonoBehaviour
         foreach(RaycastHit2D hit in hits)
         {
             IAttackable attackable = hit.collider?.GetComponent<IAttackable>();
-            Debug.Log(attackable);
             if(attackable != null && attackable.CanDamage(keys))
             {
                 hitCount++;

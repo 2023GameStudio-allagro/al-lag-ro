@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMarkerUI : MonoBehaviour
 {
+    private bool isSetted = false;
     private GameObject[] iconObjects;
     private SpriteRenderer[] iconRenderers;
     private int maxHealth;
@@ -12,6 +13,8 @@ public class EnemyMarkerUI : MonoBehaviour
 
     public void SetInitialMarker(List<AttackKey> markers)
     {
+        if(isSetted) ClearMarker();
+        isSetted = true;
         this.maxHealth = markers.Count;
 
         iconObjects = new GameObject[this.maxHealth];
@@ -46,6 +49,15 @@ public class EnemyMarkerUI : MonoBehaviour
             {
                 iconObjects[i].SetActive(false);
             }
+        }
+    }
+    private void ClearMarker()
+    {
+        int childCount = transform.childCount;
+        for (int i = childCount - 1; i >= 0; i--)
+        {
+            Transform child = transform.GetChild(i);
+            Destroy(child.gameObject);
         }
     }
 }

@@ -5,13 +5,19 @@ using UnityEngine;
 public class EnemyFactory : MonoBehaviour
 {
 	[SerializeField] private GameObject playerRef;
-	[SerializeField] private Dictionary<string, GameObject> prefabs;
+	[SerializeField] private GameObject normalEnemyPrefab;
+	[SerializeField] private GameObject tankEnemyPrefab;
+	[SerializeField] private GameObject fastEnemyPrefab;
 
 	public GameObject GetPrefab(string enemyType)
 	{
-		GameObject result;
-		if (prefabs.TryGetValue(enemyType, out result)) return result;
-		else return null;
+		switch(enemyType)
+		{
+			case Constants.NORMAL_ENEMY: return normalEnemyPrefab;
+			case Constants.FAST_ENEMY: return fastEnemyPrefab;
+			case Constants.TANK_ENEMY: return tankEnemyPrefab;
+		}
+		return null;
 	}
 	public GameObject Make(GameObject prefab, int hp, float speed)
 	{

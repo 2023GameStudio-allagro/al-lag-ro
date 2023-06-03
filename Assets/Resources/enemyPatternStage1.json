@@ -1,0 +1,97 @@
+{
+	"segments": [
+		{
+			"measures": 8,
+			"patterns":[
+				{
+					"type": "normal",
+					"hp": 1,
+					"speed": 1.5,
+					"amount": 1,
+					"interval": 4
+				}
+			]
+		},
+		{
+			"measures": 8,
+			"patterns":[
+				{
+					"type": "normal",
+					"hp": 1,
+					"speed": 1.5,
+					"amount": 1,
+					"interval": 2
+				},
+				{
+					"type": "normal",
+					"hp": 2,
+					"speed": 1.5,
+					"amount": 1,
+					"interval": 8
+				}
+			]
+		},
+		{
+			"measures": 4,
+			"patterns":[
+				{
+					"type": "tank",
+					"hp": 8,
+					"speed": 1,
+					"amount": 1,
+					"interval": 8
+				}
+			]
+		},
+		{
+			"measures": 12,
+			"patterns":[
+				{
+					"type": "tank",
+					"hp": 8,
+					"speed": 1,
+					"amount": 1,
+					"interval": 16
+				},
+				{
+					"type": "normal",
+					"hp": 1,
+					"speed": 1.5,
+					"amount": 2,
+					"interval": 2
+				}
+			]
+		},
+		{
+			"measures": 4,
+			"patterns":[
+				{
+					"type": "fast",
+					"hp": 1,
+					"speed": 3,
+					"amount": 2,
+					"interval": 4
+				}
+			]
+		},
+		{
+			"measures": 8,
+			"patterns":[
+				{
+					"type": "tank",
+					"hp": 8,
+					"speed": 1,
+					"amount": 1,
+					"interval": 16
+				},
+				{
+					"type": "fast",
+					"hp": 1,
+					"speed": 3,
+					"amount": 1,
+					"interval": 4
+				}
+			]
+		}
+	]
+}

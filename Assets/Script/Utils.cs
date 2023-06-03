@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,10 +22,29 @@ public static class Utils
     }
     public static float MapExp(float value, float fromMin, float fromMax, float toMin, float toMax)
     {
-        if(toMin <= 0)  throw new ArgumentException("Parameter should be positive number", "toMin");
-        if(toMax <= 0)  throw new ArgumentException("Parameter should be positive number", "toMax");
+        if(toMin <= 0)  throw new System.ArgumentException("Parameter should be positive number", "toMin");
+        if(toMax <= 0)  throw new System.ArgumentException("Parameter should be positive number", "toMax");
         float ratio = (value - fromMin) / (fromMax - fromMin);
         return toMin * Mathf.Exp(ratio * Mathf.Log(toMax / toMin));
+    }
+    public static Vector2 GetRandomPositionOutBound(Bounds bound, float offset)
+    {
+        int direction = Random.Range(0, 4);
+        float randX = Random.Range(bound.min.x-offset, bound.max.x+offset);
+        float randY = Random.Range(bound.min.y-offset, bound.max.y+offset);
+        switch(direction)
+        {
+            case 0:
+                return new Vector2(bound.min.x-offset, randY);
+            case 1:
+                return new Vector2(randX, bound.min.y-offset);
+            case 2:
+                return new Vector2(bound.max.x+offset, randY);
+            case 3:
+                return new Vector2(randX, bound.max.y+offset);
+            default:
+                return new Vector2();
+        }
     }
     public static void DrawCircle(LineRenderer lineRenderer, float radius)
     {
