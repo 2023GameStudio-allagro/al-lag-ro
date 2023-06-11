@@ -133,6 +133,7 @@ public class Player : MonoBehaviour
         if(power > 1) scoreManager?.HitEnemyPerfect(hitCount);
         else scoreManager?.HitEnemy(hitCount);
         animator.SetTrigger("attack");
+        if(hitCount > 0) SFXManager.Instance?.PlayTrack(keys);
     }
     public void Hit(int damage)
     {

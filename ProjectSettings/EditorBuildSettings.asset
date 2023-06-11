@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KijongScenes/Kijong_GameOver.unity
     guid: 12afe8d181d95cb44bb703bce28d4170
+  - enabled: 1
+    path: Assets/Scenes/KijongScenes/Kijong_GameClear.unity
+    guid: 8eb10992936a8d04daa14712eaa435ee
   m_configObjects: {}
