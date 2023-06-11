@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     private TemporalStatus stun = new TemporalStatus();
     private TemporalStatus invincible = new TemporalStatus();
+    private bool isDead = true;
 
     private SpriteRenderer sprite;
     private Animator animator;
@@ -33,12 +34,8 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         judgeSystem = GetComponentInChildren<JudgeLineCreator>();
         scoreManager = ScoreManager.Instance;
+        isDead = false;
     }
-
-    void Start()
-    {
-    }
-
     void OnStageChanged()
     {
         health = Constants.MAX_HEALTH;
@@ -47,6 +44,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isDead) return;
         if(!stun)
         {
             InputCommand command = GetInputCommand();
@@ -63,7 +61,7 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         Vector2 velocity;
-        if(stun) velocity = Vector2.zero;
+        if(stun || isDead) velocity = Vector2.zero;
         else velocity = new Vector2(horizontal, vertical);
 
         Move(velocity);
@@ -73,10 +71,8 @@ public class Player : MonoBehaviour
     {
         if(healthDelta == 0) return;
         this.health += healthDelta;
-        if(this.health < 0)
-        {
-            this.health = 0;
-        }
+        if(this.health < 0) this.health = 0;
+        if(this.health == 0) StartCoroutine(CallGameOver());
         onHealthChanged?.Invoke(this.health);
     }
 
@@ -138,6 +134,14 @@ public class Player : MonoBehaviour
         scoreManager?.GetDamagedByEnemy();
         invincible.Activate(Constants.INVINCIBLE_DURATION);
         animator.SetTrigger("hit");
+    }
+    private IEnumerator CallGameOver()
+    {
+        animator.SetTrigger("death");
+        isDead = true;
+
+        yield return new WaitForSeconds(1f);
+        GameManager.Instance.GameOver();
     }
     private void SetAnimation()
     {

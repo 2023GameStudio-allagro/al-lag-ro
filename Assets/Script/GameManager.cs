@@ -7,7 +7,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     private bool isPrologueSeen = false;
     private string currentScene = "Title";
-    public string prefix = "";
+    public string prefix = "Kijong_";
     public void GameStart()
     {
         if(isPrologueSeen) MoveToIngame();
@@ -32,12 +32,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public void GameOver()
     {
-        if(currentScene != "Ingame") return;
+        //if(currentScene != "Ingame") return;
         StartCoroutine(ChangeGameOverScene(prefix + "GameOver"));
     }
     public void GameClear()
     {
-        if(currentScene != "Ingame") return;
+        //if(currentScene != "Ingame") return;
         StartCoroutine(ChangeGameOverScene(prefix + "GameClear"));
     }
 
