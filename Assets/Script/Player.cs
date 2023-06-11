@@ -25,6 +25,13 @@ public class Player : MonoBehaviour
             return stun.ToBool();
         }
     }
+    public bool canHeal
+    {
+        get
+        {
+            return health > 0 && health < Constants.MAX_HEALTH;
+        }
+    }
 
     void Awake()
     {

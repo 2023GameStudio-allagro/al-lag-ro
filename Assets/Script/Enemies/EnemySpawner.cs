@@ -14,7 +14,6 @@ public class EnemySpawner : MonoBehaviour
 		levelPatternsCache = new List<SpawnPatternData>();
 		foreach(string addr in Constants.SPAWN_PATTERN_RESOURCES)
 		{
-			Debug.Log(addr);
 			levelPatternsCache.Add(JsonLoader.LoadJsonData<SpawnPatternData>(addr));
 		}
 	}
@@ -22,7 +21,6 @@ public class EnemySpawner : MonoBehaviour
 	void Start()
 	{
 		LoadStage(1);
-		Debug.Log(currentSpawnPattern);
 	}
 
 	public void OnBeatReceived(int beatNo)
