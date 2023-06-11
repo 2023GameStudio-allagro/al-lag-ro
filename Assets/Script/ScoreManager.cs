@@ -34,6 +34,16 @@ public class ScoreManager : Singletone<ScoreManager>, IScoreManager
             _combo = value;
         }
     }
+    public ScoreData scoreData
+    {
+        get
+        {
+            return new ScoreData{
+                score=_score,
+                combo=_combo
+            };
+        }
+    }
     void Start()
     {
         InitializeScore();

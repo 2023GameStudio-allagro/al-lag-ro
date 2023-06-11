@@ -26,4 +26,7 @@ public static class Constants
     {
         "enemyPatternStage1"
     };
+
+    public const string TITLE_BGM_RUNNER = "Title BGM";
+    public const string RESULT_UI_OBJECT = "Result UI";
 }
