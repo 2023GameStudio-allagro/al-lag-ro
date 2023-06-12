@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class ScoreManager : Singletone<ScoreManager>, IScoreManager
 {
+    private int _maxCombo;
     private int _score;
     private int _combo;
     public UnityEvent<int> OnChangeScore;
@@ -32,6 +33,17 @@ public class ScoreManager : Singletone<ScoreManager>, IScoreManager
         {
             if(_combo != value) OnChangeCombo?.Invoke(value);
             _combo = value;
+            if(_combo > _maxCombo) _maxCombo = _combo;
+        }
+    }
+    public ScoreData scoreData
+    {
+        get
+        {
+            return new ScoreData{
+                score=_score,
+                combo=_maxCombo
+            };
         }
     }
     void Start()

@@ -32,7 +32,11 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
 
         MakeBeatEvent(prevElapsedTime, elapsedTime);
         MakeNoteEvent(prevElapsedTime, elapsedTime);
-        if(elapsedTime > 0f && !audioRunner.isPlaying) isRunning = false;
+        if(elapsedTime > 0f && !audioRunner.isPlaying)
+        {
+            isRunning = false;
+            GameManager.Instance.GameClear();
+        }
     }
 
     public void LoadBGMData(int stageNo)

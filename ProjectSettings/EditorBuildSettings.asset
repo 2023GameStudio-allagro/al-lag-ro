@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/KijongScenes/Kijong_Title.unity
+    guid: d8b8c9884d97ca1439f4eb938aab9dbb
+  - enabled: 1
+    path: Assets/Scenes/KijongScenes/Kijong_Prologue.unity
+    guid: 8a021164fbb4e0d4b8eeec4abbcf6523
+  - enabled: 1
+    path: Assets/Scenes/KijongScenes/Kijong_Tutorial.unity
+    guid: d66c337790b74744ca2369a9ab1fe343
+  - enabled: 1
+    path: Assets/Scenes/KijongScenes/Kijong_Ingame.unity
+    guid: 0ed0dfaa72ec1e14ab66babc2c1a01f4
+  - enabled: 1
+    path: Assets/Scenes/KijongScenes/Kijong_GameOver.unity
+    guid: 12afe8d181d95cb44bb703bce28d4170
+  - enabled: 1
+    path: Assets/Scenes/KijongScenes/Kijong_GameClear.unity
+    guid: 8eb10992936a8d04daa14712eaa435ee
   m_configObjects: {}

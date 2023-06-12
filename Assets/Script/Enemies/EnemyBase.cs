@@ -36,6 +36,7 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
 
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject markUIPrefab;
+    [SerializeField] private GameObject healthItemPrefab;
 
     protected virtual void Awake()
     {
@@ -112,7 +113,11 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
         markUI.SetMarker(markers);
         if(damage > 1) animator?.SetTrigger("critHit");
         else animator?.SetTrigger("hit");
-        if(hp == 0) OnDead();
+        if(hp == 0)
+        {
+            OnDead();
+            Destroy(gameObject);
+        }
     }
     public void AttackPlayer(Player player)
     {
@@ -121,6 +126,9 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
 
     protected virtual void OnDead()
     {
-        Destroy(gameObject);
+        if(Random.Range(0f,1f) < 0.05f)
+        {
+            Instantiate(healthItemPrefab, transform.position, Quaternion.identity);
+        }
     }
 }

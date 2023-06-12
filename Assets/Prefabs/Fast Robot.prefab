@@ -124,6 +124,8 @@ MonoBehaviour:
   player: {fileID: 0}
   markUIPrefab: {fileID: 1099512028321634194, guid: 454a9cc8284921042b2cf6e504bc67c9,
     type: 3}
+  healthItemPrefab: {fileID: 3488428918988242955, guid: 690a79f7fb9328c4489f2b69af9af22b,
+    type: 3}
 --- !u!61 &3970317764310200080
 BoxCollider2D:
   m_ObjectHideFlags: 0
