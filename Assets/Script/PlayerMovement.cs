@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 2f;
     private Rigidbody2D rigid;
     private Transform mainCamera;
-    private bool isCameraFollowing = true;
+    //private bool isCameraFollowing = true;
 
     //private void Start()
     //{
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Update the player's position to be in the second column of the camera view
         Vector3 playerPosition = transform.position;
-        playerPosition.x = mainCamera.position.x-8f;
+        playerPosition.x = mainCamera.position.x - 8f;
         transform.position = playerPosition;
     }
 }

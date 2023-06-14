@@ -109,22 +109,20 @@ public class EnemySpawner : MonoBehaviour
 
                 Vector2 spawnPosition = new Vector2(spawnX, randomY);
 
-                GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity, spawnParent);
+                GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
                 //GameObject enemy= factory.Make(enemyPrefab, eachEnemyData.hp, eachEnemyData.speed);
-
+                enemy.GetComponent<SpriteRenderer>().flipX = true;
 
                 // enemymovement 접근해서 shouldfollowcamera 세팅
                 EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
                 
-                //enemyMovement.SetHP(eachEnemyData.hp);
+                enemyMovement.SetHP(eachEnemyData.hp);
                 //enemyMovement.SetSpeed(eachEnemyData.speed);
                 if (enemyMovement != null)
                 {
                     enemyMovement.shouldFollowCamera = false;
                 }
-
-                enemy.transform.localScale = new Vector2(-1f, 1f); // 왼쪽바라보는 스프라이트로 flip
-
+                
 
             }
         }
