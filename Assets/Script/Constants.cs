@@ -26,7 +26,7 @@ public static class Constants
     {
         "enemyPatternStage1"
     };
-
+    internal static int CELL_SIZE = 16;
     public const string TITLE_BGM_RUNNER = "Title BGM";
     public const string RESULT_UI_OBJECT = "Result UI";
 }

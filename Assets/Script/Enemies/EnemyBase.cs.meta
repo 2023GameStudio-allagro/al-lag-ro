@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: b017db4f40ad7be44b5529004e31eb14
+guid: d96d847d8cf2a4b47ad9828b103b311f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - player: {instanceID: 0}
-  - markUIPrefab: {fileID: 1099512028321634194, guid: 454a9cc8284921042b2cf6e504bc67c9,
-      type: 3}
-  - healthItemPrefab: {fileID: 3488428918988242955, guid: 690a79f7fb9328c4489f2b69af9af22b,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
