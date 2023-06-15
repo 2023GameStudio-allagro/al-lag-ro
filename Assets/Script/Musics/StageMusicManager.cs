@@ -80,7 +80,6 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
         else if(prevBeatNo/4 != curBeatNo/4)
         {
             beatEvent?.Invoke(curBeatNo/4);
-            SFXManager.Instance.PlayBase();
         }
     }
 

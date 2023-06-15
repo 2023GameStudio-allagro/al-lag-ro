@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class SFXManager : Singletone<SFXManager>, ISFXManager
 {
-    private AudioSource[] tracks;
-    private Coroutine soundEffectCoroutine;
-    void Start()
+    private AudioSource SFXPlayer;
+    [SerializeField] private AudioClip[] keySFX;
+    [SerializeField] private AudioClip baseSFX;
+    protected override void Awake()
     {
-        tracks = new AudioSource[5];
-        for (int i = 0; i < 5; i++)
-        {
-            tracks[i] = transform.GetChild(i)?.GetComponent<AudioSource>();
-        }
+        base.Awake();
+        SFXPlayer = GetComponent<AudioSource>();
     }
     public void PlayTrack(AttackKey key)
     {
         for (int i = 0; i < 4; i++)
         {
-            if (((int)key & 1 << i) == 1 << i) tracks[i].Play();
+            if (((int)key & 1 << i) == 1 << i) SFXPlayer.PlayOneShot(keySFX[i]);
+        }
+    }
+    public void PlayTrack(AttackKey key, float volume)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (((int)key & 1 << i) == 1 << i) SFXPlayer.PlayOneShot(keySFX[i], volume);
         }
     }
     public void PlayBase()
     {
-        tracks[4].Play();
+        SFXPlayer.PlayOneShot(baseSFX, 0.4f);
     }
 }
 
