@@ -171,6 +171,7 @@ public class Player : MonoBehaviour
         ChangeHealth(-damage);
         scoreManager?.GetDamagedByEnemy();
         invincible.Activate(Constants.INVINCIBLE_DURATION);
+        StartCoroutine(BlinkInvincible(Constants.INVINCIBLE_DURATION));
         animator.SetTrigger("hit");
     }
     private IEnumerator CallGameOver()
@@ -180,6 +181,18 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         GameManager.Instance.GameOver();
+    }
+    private IEnumerator BlinkInvincible(float duration)
+    {
+        float time=0f;
+        while(time < duration)
+        {
+            if(time % 0.5f < 0.25f) sprite.color = new Color(1f, 1f, 1f, 0.5f);
+            else sprite.color = new Color(1f, 1f, 1f, 1f);
+            yield return null;
+            time += Time.deltaTime;
+        }
+        sprite.color = new Color(1f, 1f, 1f, 1f);
     }
 
     private bool ShouldCameraFollowPlayer()
