@@ -11,9 +11,10 @@ public class BossMusicManager : MonoBehaviour, IMusicManager
         public float time;
     }
 
-    private UnityEvent sharedNoteEvent;
+    public float bpm { get { return currentSource?.bpm ?? 120; } }
+    private UnityEvent<char> sharedNoteEvent;
     private UnityEvent<int> sharedBeatEvent;
-    public UnityEvent noteEvent { get {return sharedNoteEvent;} }
+    public UnityEvent<char> noteEvent { get {return sharedNoteEvent;} }
     public UnityEvent<int> beatEvent { get {return sharedBeatEvent;} }
     public UnityEvent phaseEndEvent;
 
@@ -96,7 +97,7 @@ public class BossMusicManager : MonoBehaviour, IMusicManager
         audioRunner.loop = false;
     }
 
-    public void SetSharedEvent(UnityEvent note, UnityEvent<int> beat)
+    public void SetSharedEvent(UnityEvent<char> note, UnityEvent<int> beat)
     {
         sharedNoteEvent = note;
         sharedBeatEvent = beat;
@@ -121,7 +122,7 @@ public class BossMusicManager : MonoBehaviour, IMusicManager
         if(curBeatNo < 0) return;
         if(prevBeatNo != curBeatNo && currentSource.HasNote(curBeatNo, curTime.phase))
         {
-            noteEvent?.Invoke();
+            noteEvent?.Invoke('z');
         }
     }
 

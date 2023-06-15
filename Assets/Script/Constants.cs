@@ -4,6 +4,10 @@ using UnityEngine;
 
 public static class Constants
 {
+    public const float BASE_DURATION_BEAT = 8;
+    public const float BASE_ENEMY_DISTANCE = 15;
+    public const float LEFT_BOUND = -12f;
+
     public const float JUDGE_LINE_SIZE = 3f;
     public const float JUDGE_BASE_SIZE = 0.3f;
 
@@ -29,4 +33,5 @@ public static class Constants
     internal static int CELL_SIZE = 16;
     public const string TITLE_BGM_RUNNER = "Title BGM";
     public const string RESULT_UI_OBJECT = "Result UI";
+    public const string SLOW_ZONE_RUNNER = "Beat Manager";
 }

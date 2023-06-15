@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class EnemyFactory : MonoBehaviour
 {
-    //[SerializeField] private GameObject playerRef;
     [SerializeField] private GameObject normalEnemyPrefab;
     [SerializeField] private GameObject tankEnemyPrefab;
     [SerializeField] private GameObject fastEnemyPrefab;
+    [SerializeField] private GameObject empEnemyPrefab;
+    [SerializeField] private GameObject parabolicEnemyPrefab;
 
+    public GameObject GetPrefab(char enemyType)
+    {
+        switch (enemyType)
+        {
+            case 'z': 
+            case 'x': return normalEnemyPrefab;
+            case 'c': return fastEnemyPrefab;
+            case 'v': return tankEnemyPrefab;
+            case 's': return Random.Range(0, 2) == 0 ? empEnemyPrefab : parabolicEnemyPrefab;
+        }
+        return null;
+    }
     public GameObject GetPrefab(string enemyType)
     {
         switch (enemyType)
@@ -19,12 +32,12 @@ public class EnemyFactory : MonoBehaviour
         }
         return null;
     }
-    public GameObject Make(GameObject prefab, int hp, float speed)
+    public GameObject Make(GameObject prefab, char enemyType)
     {
         GameObject enemy = Instantiate(prefab);
         EnemyBase enemyBrain = enemy.GetComponent<EnemyBase>();
-        enemyBrain.SetHP(hp);
-        enemyBrain.SetSpeed(speed);
+        enemyBrain.SetMarker(new EnemyMarkerV2(enemyType));
+        enemyBrain.SetSpeed(1f);
         return enemy;
     }
 }

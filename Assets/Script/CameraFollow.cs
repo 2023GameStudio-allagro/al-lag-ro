@@ -40,11 +40,11 @@ public class CameraFollow : MonoBehaviour
                 shouldFollow = false;
 
                 // Find all the enemy game objects and stop them from following the camera
-                EnemyMovement[] enemies = FindObjectsOfType<EnemyMovement>();
-                foreach (EnemyMovement enemy in enemies)
-                {
-                    enemy.StopFollowingCamera();
-                }
+                // EnemyMovement[] enemies = FindObjectsOfType<EnemyMovement>();
+                // foreach (EnemyMovement enemy in enemies)
+                // {
+                //     enemy.StopFollowingCamera();
+                // }
             }
         }
     }

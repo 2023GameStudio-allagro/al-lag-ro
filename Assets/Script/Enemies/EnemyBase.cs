@@ -6,8 +6,8 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
 {
     private SpriteRenderer sprite;
     private Animator animator;
-    private Rigidbody2D rigid;
-    private MarkerList _markers;
+    protected Rigidbody2D rigid;
+    private IEnemyMarker _markers;
     private EnemyMarkerUI markUI;
 
     public List<AttackKey> markers
@@ -40,9 +40,7 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
         }
     }
     public int attackPower { get { return 1; } }
-    public float moveSpeed { get; protected set; }
 
-    [SerializeField] private GameObject player;
     [SerializeField] private GameObject markUIPrefab;
     [SerializeField] private GameObject healthItemPrefab;
 
@@ -60,16 +58,15 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
     // Start is called before the first frame update
     protected virtual void Start()
     {
-
+        sprite.flipX = true;
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
         SetAnimation();
+        if(rigid.position.x < Constants.LEFT_BOUND) Destroy(gameObject); 
     }
-
-
 
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
@@ -77,28 +74,21 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
         if (player != null) AttackPlayer(player);
     }
 
-
     protected virtual void SetAnimation()
     {
         Vector2 movement = rigid.velocity;
         if (!Mathf.Approximately(movement.x, 0.0f)) sprite.flipX = (movement.x < 0f);
     }
 
-    public void SetHP(int maxHP)
+    public void SetMarker(IEnemyMarker markers)
     {
-        _markers = new MarkerList(maxHP);
-        markUI.SetInitialMarker(markers);
+        _markers = markers;
+        markUI.SetInitialMarker(this.markers);
     }
-
-    public void SetSpeed(float speed)
+    public virtual void SetSpeed(float multiplier)
     {
-        moveSpeed = speed;
+        rigid.velocity = new Vector2(-multiplier * Utils.GetBaseSpeed(MusicManager.Instance.bpm), 0f);
     }
-    public void SetPlayer(GameObject player)
-    {
-        this.player = player;
-    }
-
 
     public bool CanDamage(AttackKey key)
     {
@@ -107,6 +97,7 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
     }
     public void Damage(int damage)
     {
+        if (hp == 0) return;
         _markers.Decrease(damage);
         markUI.SetMarker(markers);
         if (damage > 1) animator?.SetTrigger("critHit");

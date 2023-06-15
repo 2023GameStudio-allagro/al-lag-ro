@@ -4,7 +4,8 @@ using UnityEngine.Events;
 
 public interface IMusicManager
 {
-    UnityEvent noteEvent { get; }
+    float bpm { get; }
+    UnityEvent<char> noteEvent { get; }
     UnityEvent<int> beatEvent { get; }
     void LoadBGMData(int stageNo);
     void StartMusic();

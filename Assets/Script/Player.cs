@@ -129,7 +129,8 @@ public class Player : MonoBehaviour
     }
     void CastAttack(int power, AttackKey keys)
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(rigid.position, Constants.ATTACK_RADIUS, Vector2.zero, 0f, 1 << Constants.ENEMY_LAYER);
+        Vector2 size = new Vector2(0.5f, 4f);
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(rigid.position, size, 0f, Vector2.right, 3f, 1 << Constants.ENEMY_LAYER);
 
         int hitCount = 0;
         foreach (RaycastHit2D hit in hits)
@@ -145,6 +146,24 @@ public class Player : MonoBehaviour
         else scoreManager?.HitEnemy(hitCount);
         animator.SetTrigger("attack");
         if (hitCount > 0) SFXManager.Instance?.PlayTrack(keys);
+    }
+    public void AttackAll()
+    {
+        int hitCount = 0;
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(Vector2.zero, new Vector2(18f, 10f), 0f, Vector2.zero, 0f, 1 << Constants.ENEMY_LAYER);
+        foreach (RaycastHit2D hit in hits)
+        {
+            IAttackable attackable = hit.collider?.GetComponent<IAttackable>();
+            if (attackable != null)
+            {
+                hitCount++;
+                attackable.Damage(1);
+            }
+        }
+        scoreManager?.HitEnemy(hitCount);
+        animator.SetTrigger("attack");
+        // 일명 빅장. 모든 키음이 동시에 나옴
+        if (hitCount > 0) SFXManager.Instance?.PlayTrack((AttackKey)0b1111);
     }
     public void Hit(int damage)
     {
