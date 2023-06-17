@@ -5,6 +5,7 @@ using UnityEngine;
 public class EmpRobot : EnemyBase
 {
     public GameObject deadAnimationPrefab;
+    public GameObject boomPrefab;
     private float xVelocity;
     private int yDirection = 1;
     private bool isAlive = true; // Variable to track if the enemy is alive
@@ -37,6 +38,7 @@ public class EmpRobot : EnemyBase
         GetComponent<SpriteRenderer>().enabled = false;
         Vector3 enemyPosition = transform.position;
         GameObject deadAnimationObject = Instantiate(deadAnimationPrefab, enemyPosition, Quaternion.identity);
+        Instantiate(boomPrefab, enemyPosition, Quaternion.identity);
 
         Vector2 targetPosition = new Vector2(18f, 1f);
         deadAnimationObject.GetComponent<DeadEffectController>().targetPosition = targetPosition;

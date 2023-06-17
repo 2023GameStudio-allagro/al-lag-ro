@@ -121,13 +121,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edf15e93dceb534989ca8de2e7a3c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadEffectBlue: {fileID: 0}
-  deadEffectGreen: {fileID: 0}
   markUIPrefab: {fileID: 1099512028321634194, guid: 454a9cc8284921042b2cf6e504bc67c9,
     type: 3}
   healthItemPrefab: {fileID: 3488428918988242955, guid: 690a79f7fb9328c4489f2b69af9af22b,
     type: 3}
   deadAnimationPrefab: {fileID: 3151868417855451927, guid: b7e00304a6d432b4fbf4c7892beec04c,
+    type: 3}
+  boomPrefab: {fileID: 3896607117463377307, guid: 02181b75ec10be34eac139738e78c7d0,
     type: 3}
 --- !u!61 &9079418668461539703
 BoxCollider2D:
