@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealthIcon : MonoBehaviour
 {
+    private bool isActive = true;
     private Animator animator;
     void Awake()
     {
@@ -20,7 +21,12 @@ public class HealthIcon : MonoBehaviour
 
     public void Glitter(int beatNo)
     {
-        if(beatNo % 4 != 0) return;
+        if(!isActive || beatNo % 4 != 0) return;
         animator.SetTrigger("Glitter");
+    }
+    public void Activate(bool isActive)
+    {
+        this.isActive = isActive;
+        animator.SetBool("Active", isActive);
     }
 }

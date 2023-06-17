@@ -5,9 +5,10 @@ using UnityEngine.Events;
 
 public class MusicManager : Singletone<MusicManager>, IMusicManager
 {
-    public UnityEvent _noteEvent = new UnityEvent();
+    public float bpm { get {return currentMusicManager?.bpm ?? 120; } }
+    public UnityEvent<char> _noteEvent = new UnityEvent<char>();
     public UnityEvent<int> _beatEvent = new UnityEvent<int>();
-    public UnityEvent noteEvent { get {return _noteEvent;} }
+    public UnityEvent<char> noteEvent { get {return _noteEvent;} }
     public UnityEvent<int> beatEvent { get {return _beatEvent;} }
 
     private IMusicManager currentMusicManager;

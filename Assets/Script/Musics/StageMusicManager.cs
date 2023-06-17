@@ -5,9 +5,11 @@ using UnityEngine.Events;
 
 public class StageMusicManager : MonoBehaviour, IMusicManager
 {
-    private UnityEvent sharedNoteEvent;
+    public float bpm { get { return currentSource?.bpm ?? 120; } }
+
+    private UnityEvent<char> sharedNoteEvent;
     private UnityEvent<int> sharedBeatEvent;
-    public UnityEvent noteEvent { get {return sharedNoteEvent;} }
+    public UnityEvent<char> noteEvent { get {return sharedNoteEvent;} }
     public UnityEvent<int> beatEvent { get {return sharedBeatEvent;} }
 
     [SerializeField] private StageMusicSource[] sources;
@@ -47,19 +49,19 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
 
     public void StartMusic()
     {
-        elapsedTime = -3f - currentSource.offset;
+        elapsedTime = -GetInitialElapsedTime(bpm, currentSource.offset);
         isRunning = true;
-        StartCoroutine(PlayDelayedMusic(3f));
+        StartCoroutine(PlayDelayedMusic(GetInitialMusicDelay(bpm, currentSource.offset)));
     }
 
     public void EndMusic()
     {
-        elapsedTime = -3f - currentSource.offset;
+        elapsedTime = -GetInitialElapsedTime(bpm, currentSource.offset);
         isRunning = false;
         audioRunner.Stop();
     }
 
-    public void SetSharedEvent(UnityEvent note, UnityEvent<int> beat)
+    public void SetSharedEvent(UnityEvent<char> note, UnityEvent<int> beat)
     {
         sharedNoteEvent = note;
         sharedBeatEvent = beat;
@@ -70,22 +72,32 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
         float bpm = currentSource.bpm;
         int prevBeatNo = GetBeatNo(prevTime, bpm);
         int curBeatNo = GetBeatNo(curTime, bpm);
+        if(Input.GetMouseButtonDown(0)) Debug.Log(curBeatNo);
+        if(Input.GetMouseButtonDown(1)) Debug.Log("This is mainBeat!");
+
         if(curBeatNo < 0) return;
         if(prevBeatNo < 0 && curBeatNo >= 0) beatEvent?.Invoke(0);
-        else if(prevBeatNo/4 != curBeatNo/4) beatEvent?.Invoke(curBeatNo/4);
+        else if(prevBeatNo/4 != curBeatNo/4)
+        {
+            beatEvent?.Invoke(curBeatNo/4);
+        }
     }
 
     private void MakeNoteEvent(float prevTime, float curTime)
     {
         float bpm = currentSource.bpm;
-        float delay = 1f;
+        float delay = Utils.GetBaseDuration(bpm);
         
         if(IsMusicStampEnd(curTime + delay)) return;
         int prevBeatNo = GetBeatNo(prevTime + delay, bpm);
         int curBeatNo = GetBeatNo(curTime + delay, bpm);
         if(curBeatNo < 0) return;
 
-        if(prevBeatNo != curBeatNo && currentSource.HasNote(curBeatNo)) noteEvent?.Invoke();
+        if(prevBeatNo != curBeatNo && currentSource.HasNote(curBeatNo))
+        {
+            char key = currentSource.GetNote(curBeatNo);
+            noteEvent?.Invoke(key);
+        }
     }
 
     private IEnumerator PlayDelayedMusic(float delaySec)
@@ -105,5 +117,18 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
     {
         float interval = 60 / (bpm * 4);
         return (int)Mathf.Floor(time / interval );
+    }
+
+    private float GetInitialElapsedTime(float bpm, float offset)
+    {
+        float beatDelay = Utils.GetBaseDuration(bpm);
+        if(offset > beatDelay) return offset;
+        return beatDelay;
+    }
+    private float GetInitialMusicDelay(float bpm, float offset)
+    {
+        float beatDelay = Utils.GetBaseDuration(bpm);
+        if(offset > beatDelay) return 0f;
+        return beatDelay - offset;
     }
 }

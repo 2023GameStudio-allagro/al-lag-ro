@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: faf13cdbd955dc9408770ed416271321
+guid: e4cd5b5e2d53b0b42a3b0dfd30712b3e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,92 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerSprite_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 29
-        width: 16
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 489947189a95b524baf573d07e32b053
-      internalID: -217829939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerSprite_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 29
-        width: 16
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a50a4cec25fe7884c8816eba61d8b3af
-      internalID: 775568330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerSprite_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 29
-        width: 16
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a41acd5c8b321448a80a99c50e54d86
-      internalID: -1113968472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerSprite_3
+      name: judge_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 29
+        width: 80
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e674ed411fe7f304298d71419bcdac9f
-      internalID: -401600212
+      spriteID: 7401a225f545e494892d66e28d1f4f93
+      internalID: 1099678500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprite_4
+      name: judge_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 80
         y: 0
-        width: 16
-        height: 29
+        width: 80
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e40072e18568dc439d4a04f797f3848
-      internalID: -946315737
+      spriteID: 241150df2c139294ebc056581af218ac
+      internalID: 567427567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprite_5
+      name: judge_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 160
         y: 0
-        width: 16
-        height: 29
+        width: 80
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac65750ebbf4d604c8ac00b3b922be65
-      internalID: -965290866
+      spriteID: 754630e75edc04b4abd428936cb30450
+      internalID: 234766426
       vertices: []
       indices: 
       edges: []
@@ -253,12 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      playerSprite_0: -217829939
-      playerSprite_1: 775568330
-      playerSprite_2: -1113968472
-      playerSprite_3: -401600212
-      playerSprite_4: -946315737
-      playerSprite_5: -965290866
+      judge_0: 1099678500
+      judge_1: 567427567
+      judge_2: 234766426
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

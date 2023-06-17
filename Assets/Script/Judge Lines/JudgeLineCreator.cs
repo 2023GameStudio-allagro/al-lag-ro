@@ -7,25 +7,9 @@ public class JudgeLineCreator : MonoBehaviour
     private Queue<JudgeLine> noteQueue = new Queue<JudgeLine>();
     [SerializeField] private GameObject judgeLineBase;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnNoteReceived()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void MakeNote()
-    {
-        GameObject noteObject = Instantiate(judgeLineBase);
-        noteObject.transform.SetParent(this.transform, false);
-        JudgeLine note = noteObject.GetComponent<JudgeLine>();
-        note.onTimeover += TimeoverNote;
-        noteQueue.Enqueue(note);
+        StartCoroutine(DelayedMakeNote());
     }
 
     public Judgement HitNote()
@@ -47,5 +31,19 @@ public class JudgeLineCreator : MonoBehaviour
     {
         noteQueue.Dequeue();
         ScoreManager.Instance?.Miss();
+    }
+
+    private IEnumerator DelayedMakeNote()
+    {
+        yield return new WaitForSeconds(Utils.GetBaseDuration(MusicManager.Instance.bpm) - 1f);
+        MakeNote();
+    }
+    private void MakeNote()
+    {
+        GameObject noteObject = Instantiate(judgeLineBase);
+        noteObject.transform.SetParent(this.transform, false);
+        JudgeLine note = noteObject.GetComponent<JudgeLine>();
+        note.onTimeover += TimeoverNote;
+        noteQueue.Enqueue(note);
     }
 }

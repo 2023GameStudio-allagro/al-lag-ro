@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class MarkerList : IEnumerable<AttackKey>
+public class MarkerList : IEnumerable<AttackKey>, IEnemyMarker
 {
     private int start;
     private int end;
