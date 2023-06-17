@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigid;
     private JudgeLineCreator judgeSystem;
     private IScoreManager scoreManager;
+    private JudgeTextMaker judgeTextMaker;
 
     public float moveSpeed = 5f;
     public UnityEvent<int> onHealthChanged;
@@ -39,6 +40,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         judgeSystem = GetComponentInChildren<JudgeLineCreator>();
+        judgeTextMaker = GetComponent<JudgeTextMaker>();
         scoreManager = ScoreManager.Instance;
         isDead = false;
     }
@@ -126,6 +128,7 @@ public class Player : MonoBehaviour
                 scoreManager?.AttackWrongTime();
                 break;
         }
+        judgeTextMaker.MakeJudgeText(judgement);
     }
     void CastAttack(int power, AttackKey keys)
     {

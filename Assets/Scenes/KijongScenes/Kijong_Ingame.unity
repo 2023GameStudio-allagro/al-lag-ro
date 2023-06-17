@@ -710,6 +710,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442a4c1d07cda0046b10bfd3317d459d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &751240927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 751240928}
+  m_Layer: 0
+  m_Name: Judge Text Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &751240928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751240927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &767593747
 GameObject:
   m_ObjectHideFlags: 0
@@ -10486,8 +10517,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1955509464}
   - component: {fileID: 1955509463}
-  - component: {fileID: 1955509466}
   - component: {fileID: 1955509467}
+  - component: {fileID: 1955509470}
+  - component: {fileID: 1955509466}
   - component: {fileID: 1955509468}
   - component: {fileID: 1955509469}
   m_Layer: 0
@@ -10630,8 +10662,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.46875}
-    oldSize: {x: 1, y: 2}
+    pivot: {x: 0.5, y: 0.4827586}
+    oldSize: {x: 1, y: 1.8125}
     newSize: {x: 1, y: 1.8125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10661,3 +10693,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1955509470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955509462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066bb48fd2b6b3646b801836b805933f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perfectText: {fileID: 1099678500, guid: e4cd5b5e2d53b0b42a3b0dfd30712b3e, type: 3}
+  goodText: {fileID: 567427567, guid: e4cd5b5e2d53b0b42a3b0dfd30712b3e, type: 3}
+  badText: {fileID: 234766426, guid: e4cd5b5e2d53b0b42a3b0dfd30712b3e, type: 3}
+  judgeTextPrefab: {fileID: 2188976595980999183, guid: cb6f5d0e54126bb4c8cdbbf1172301cd,
+    type: 3}
+  parentObject: {fileID: 751240928}
