@@ -192,7 +192,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c69fea53b6c609d40b6f6985c2190e23, type: 3}
   - {fileID: 21300000, guid: 7f12950d83486e24dba8bb5ad378cf08, type: 3}
   - {fileID: 21300000, guid: 69dd16ea33e07fc448deb3df94208ffe, type: 3}
-  - {fileID: 21300000, guid: 62a80169dc4b8444faa831680e5c2cc1, type: 3}
   touchToNextIndicator: {fileID: 1352388789}
   onEndCutscene:
     m_PersistentCalls:
