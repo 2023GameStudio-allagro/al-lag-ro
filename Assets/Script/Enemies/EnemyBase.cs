@@ -10,9 +10,6 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
     private IEnemyMarker _markers;
     private EnemyMarkerUI markUI;
 
-    [SerializeField] private GameObject deadEffectBlue;
-    [SerializeField] private GameObject deadEffectGreen;
-
     public List<AttackKey> markers
     {
         get
