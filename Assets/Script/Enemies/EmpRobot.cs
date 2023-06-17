@@ -33,6 +33,10 @@ public class EmpRobot : EnemyBase
     {
         base.OnDead();
 
+        // 귀찮아요... 이 패턴 안티패턴인 건 아는데 나중에 리팩터링할예정
+        Player player = GameObject.Find("player").GetComponent<Player>();
+        player.AttackAll();
+
         isAlive = false; // Set the enemy as dead
 
         GetComponent<SpriteRenderer>().enabled = false;

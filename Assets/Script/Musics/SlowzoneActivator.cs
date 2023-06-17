@@ -6,8 +6,11 @@ public class SlowzoneActivator : MonoBehaviour
 {
     private AudioSource audioSource;
     private IEnumerator currentActivation = null;
+    private SlowzoneEffector effector;
+    [SerializeField] private GameObject slowzoneEffectorObj; 
     void Awake()
     {
+        effector = slowzoneEffectorObj?.GetComponent<SlowzoneEffector>();
         audioSource = GetComponent<AudioSource>();
     }
     void OnDisable()
@@ -25,7 +28,9 @@ public class SlowzoneActivator : MonoBehaviour
     {
         Time.timeScale = 0.5f;
         audioSource.pitch = 0.5f;
+        effector?.Activate();
         yield return new WaitForSeconds(duration);
+        effector?.Deactivate();
         Time.timeScale = 1f;
         audioSource.pitch = 1f;
         currentActivation = null;
