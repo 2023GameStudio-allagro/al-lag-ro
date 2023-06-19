@@ -1,0 +1,1015 @@
+fileFormatVersion: 2
+guid: 9b4712095c116cd4a8d0bb45664ebc14
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: screenEffectNew_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8958922c6c686fd49a6f06a60fdf77a3
+      internalID: 1253623283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded77d8a3bb24b044bbb9c221a71f84b
+      internalID: -364340177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ce0738d3e26dd4e8a0895a5062292f
+      internalID: 472199486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5aa26f745993bb4ea49e60d6fd71da7
+      internalID: -1439523512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_4
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8491a537996542040976fa9246d1127d
+      internalID: -688226707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_5
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ddcd56e957f9841a6551dccb814902
+      internalID: -1258393796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_6
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd31c436825c356439e556c3cafb7b90
+      internalID: -357802921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_7
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdd29b82ae2e2c45a00cc931213afe1
+      internalID: -128169997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_8
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b04465808a15f438ec87edcc0a07c2
+      internalID: -983291500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_9
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69754287444fe0b4face76a96579caaf
+      internalID: 849724751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_10
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e68b6baf5a48494386178841a563fe7
+      internalID: 1131774592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_11
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cc465e3567c19459e1807f2a1cbcc5
+      internalID: -2033350757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_12
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2da37d08dac03e4b8589d23ca3ff049
+      internalID: 579793836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_13
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbc16e5143b2774c8036a2478990bb9
+      internalID: 1958319886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_14
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436a9398d8d2b05418ceea8adf29d8d2
+      internalID: -1800100871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_15
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411f94bb29261724c99ae3d2e6070277
+      internalID: 2046037620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_16
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953a113f06adaea4a8bc6d9df9a9d970
+      internalID: 410794032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_17
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e0de2d75ba94d4ba84765ed209754e
+      internalID: -912477295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_18
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3af1c7881d8834ab9d69586de7bae1
+      internalID: 325958149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_19
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ed5200a381d664aaed892796dd4feb
+      internalID: 662875030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24101702873ce9438251e9a8914d729
+      internalID: -138932897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97de98355ff90e04b9eb10090105942a
+      internalID: -1286739809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e32fa0def96c6d42b6ecc1ff7a5d2d7
+      internalID: 895426787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_23
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370cc2b56229a7941a4ce37c90f837d7
+      internalID: 1976192997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_24
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6faedee22354e546a359dd8571dbe4f
+      internalID: -1849886246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_25
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9d390d3f4e1b94791f4a68a2d15e3e
+      internalID: -1779389713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_26
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323b62881f151e842995d71cb6e081d1
+      internalID: 1987859415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_27
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e73a584d486311489506863ea17832a
+      internalID: -248053717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_28
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5e6e5c304fadd4aa92d5416bd35d1b
+      internalID: -199392874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_29
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36690890ea4a60940ac3f94ac256c5fd
+      internalID: 43757853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_30
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fc904fb35605b4b9108c4ae4f4f4f8
+      internalID: -242558160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_31
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e766065d6875d44a8489145ef9bc43a
+      internalID: 482732857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_32
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa0ddf1da0cd154e8ba507f6063282b
+      internalID: 1756105106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_33
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19403bb7f68fd9248bab13589fbf4cc0
+      internalID: 1715949043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_34
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4b30c952b7ece4aadfb2850bc17f93
+      internalID: -136658519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_35
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e036c50a004c14296725b12c47a2d3
+      internalID: 2039141441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_36
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b16ed03ca606c43b50cfced856680b
+      internalID: -1516358827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_37
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07d4429db07d754e9c78f3a95cf6cad
+      internalID: -147749500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_38
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f304593e1a889ce4aa5948d5c5d0fdb9
+      internalID: 381339932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenEffectNew_39
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206a2ca7b0efa054fbe04c1fb50cf54c
+      internalID: -667855583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      screenEffectNew_0: 1253623283
+      screenEffectNew_1: -364340177
+      screenEffectNew_10: 1131774592
+      screenEffectNew_11: -2033350757
+      screenEffectNew_12: 579793836
+      screenEffectNew_13: 1958319886
+      screenEffectNew_14: -1800100871
+      screenEffectNew_15: 2046037620
+      screenEffectNew_16: 410794032
+      screenEffectNew_17: -912477295
+      screenEffectNew_18: 325958149
+      screenEffectNew_19: 662875030
+      screenEffectNew_2: 472199486
+      screenEffectNew_20: -138932897
+      screenEffectNew_21: -1286739809
+      screenEffectNew_22: 895426787
+      screenEffectNew_23: 1976192997
+      screenEffectNew_24: -1849886246
+      screenEffectNew_25: -1779389713
+      screenEffectNew_26: 1987859415
+      screenEffectNew_27: -248053717
+      screenEffectNew_28: -199392874
+      screenEffectNew_29: 43757853
+      screenEffectNew_3: -1439523512
+      screenEffectNew_30: -242558160
+      screenEffectNew_31: 482732857
+      screenEffectNew_32: 1756105106
+      screenEffectNew_33: 1715949043
+      screenEffectNew_34: -136658519
+      screenEffectNew_35: 2039141441
+      screenEffectNew_36: -1516358827
+      screenEffectNew_37: -147749500
+      screenEffectNew_38: 381339932
+      screenEffectNew_39: -667855583
+      screenEffectNew_4: -688226707
+      screenEffectNew_5: -1258393796
+      screenEffectNew_6: -357802921
+      screenEffectNew_7: -128169997
+      screenEffectNew_8: -983291500
+      screenEffectNew_9: 849724751
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

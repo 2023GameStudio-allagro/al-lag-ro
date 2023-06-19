@@ -7,7 +7,6 @@ public class ParabolicRobot : EnemyBase
     private float xVelocity;
     private int yDirection = 1;
     private SlowzoneActivator activator;
-
     protected override void Awake()
     {
         base.Awake();
@@ -26,12 +25,10 @@ public class ParabolicRobot : EnemyBase
     }
     protected override void OnDead()
     {
-        base.OnDead();
-        // 귀찮아요... 이 패턴 안티패턴인 건 아는데 나중에 리팩터링할예정
-        // Player player = GameObject.Find("player").GetComponent<Player>();
-        // player.AttackAll();
         activator?.Activate();
+        base.OnDead();
     }
+   
     public override void SetSpeed(float multiplier)
     {
         xVelocity = -multiplier * Utils.GetBaseSpeed(MusicManager.Instance.bpm);

@@ -1,0 +1,993 @@
+fileFormatVersion: 2
+guid: f4c26534459d2854083b6917d13aaf4e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: screenNeonEffect2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ca13dfcb28df54fa700f9ae0f75160
+      internalID: -178536046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb797dacbd4f524ea81b33e5a9bd7df
+      internalID: 1827946880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b67967f637621541b1e2dcbd5fd331d
+      internalID: -802171068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb64b91738fae5449f74ce19bdb7edc
+      internalID: -1338041639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_4
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c944e325da18d41a8b4f84bc5695c0
+      internalID: -1149722392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_5
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad255acfb303d746a80ba9f47121b28
+      internalID: -354091628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_6
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c219b155396fa478aee730033b8c9f
+      internalID: -417729205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_7
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4ee2d36a6217b41a791e413772fe6c
+      internalID: -1114203939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_8
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 480
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5148284ad69a6aa4d9b4a8e52dfdc31f
+      internalID: -1893179825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8041c84b16c8c428fcf7c58ab1a184
+      internalID: 1190511075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bb5d0894604834aa3ec6882dd1f8a3
+      internalID: -213735744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cb492284f8e3248a36d259fbc88d95
+      internalID: 1508828404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_12
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22f20c460eae9c4799a0c77a51ed530
+      internalID: 1923514304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_13
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76d17b8ac14eb443a2d0472c422b1eb
+      internalID: 1230110274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_14
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b869594734132f4a8cfb49e6f018095
+      internalID: 455182307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_15
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3809a57e41eb14193306caf0de5d85
+      internalID: -1304669555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_16
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658f21646fb4651439ad4841aff982a9
+      internalID: 1481907749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_17
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d22b49306b50e947860cb5a98a56602
+      internalID: -1384150175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_18
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 320
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8c06b7d9a817342a453348077e2ea9
+      internalID: -1663434748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd159afa4413a6c4abfb1745c539b10c
+      internalID: -506732739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_20
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7884a498a71ec524d86873a5eea716dc
+      internalID: 143227854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f645476b7773a4e8966ec8101e8598
+      internalID: -891161736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_22
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74fd75bf88f232c4f8400e4c518bed83
+      internalID: -1762055411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_23
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8433e0098813f458ec3b0bd594d075
+      internalID: 672220394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_24
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf64cf91ca223b438b14719f3d492ff
+      internalID: -1744419914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_25
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbba6b1111859b41bd0f38062e132bc
+      internalID: 554715063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_26
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c0d13224cce894b855c456faf9ab8e
+      internalID: -1257992717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_27
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9227d1605459a9c4aa82b09421bb507f
+      internalID: -2091639584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_28
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 160
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f924e7baf10b8c4d941a1dcc70edd58
+      internalID: 1173013283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f53b0060a5be746b2aaee8bc108116
+      internalID: 800632026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_30
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b515d408cf3194ab56d92a28251334
+      internalID: -417167106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_31
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c9f5888f50b1c489ceaa3d228352bf
+      internalID: -1054659246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_32
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd0f3f4e1724ce4dac602adc8461c7f
+      internalID: 1671662367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_33
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ac4dae6f0d950418f393219f933b42
+      internalID: -1371556586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_34
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b851863178bc8ca4182b18473f31ab06
+      internalID: 774227366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_35
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd92243cd53d8e47b7d4cbc64fbdacc
+      internalID: 828416811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_36
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed12481c2a822545b88f81d42fa6745
+      internalID: -152404051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_37
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ef994b4d5b22445b61525f0e890ebd
+      internalID: -1630216675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: screenNeonEffect2_38
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 288
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5813b69901948ec489b5898b11fbd0b5
+      internalID: 2008505552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      screenNeonEffect2_0: -178536046
+      screenNeonEffect2_1: 1827946880
+      screenNeonEffect2_10: -213735744
+      screenNeonEffect2_11: 1508828404
+      screenNeonEffect2_12: 1923514304
+      screenNeonEffect2_13: 1230110274
+      screenNeonEffect2_14: 455182307
+      screenNeonEffect2_15: -1304669555
+      screenNeonEffect2_16: 1481907749
+      screenNeonEffect2_17: -1384150175
+      screenNeonEffect2_18: -1663434748
+      screenNeonEffect2_19: -506732739
+      screenNeonEffect2_2: -802171068
+      screenNeonEffect2_20: 143227854
+      screenNeonEffect2_21: -891161736
+      screenNeonEffect2_22: -1762055411
+      screenNeonEffect2_23: 672220394
+      screenNeonEffect2_24: -1744419914
+      screenNeonEffect2_25: 554715063
+      screenNeonEffect2_26: -1257992717
+      screenNeonEffect2_27: -2091639584
+      screenNeonEffect2_28: 1173013283
+      screenNeonEffect2_29: 800632026
+      screenNeonEffect2_3: -1338041639
+      screenNeonEffect2_30: -417167106
+      screenNeonEffect2_31: -1054659246
+      screenNeonEffect2_32: 1671662367
+      screenNeonEffect2_33: -1371556586
+      screenNeonEffect2_34: 774227366
+      screenNeonEffect2_35: 828416811
+      screenNeonEffect2_36: -152404051
+      screenNeonEffect2_37: -1630216675
+      screenNeonEffect2_38: 2008505552
+      screenNeonEffect2_4: -1149722392
+      screenNeonEffect2_5: -354091628
+      screenNeonEffect2_6: -417729205
+      screenNeonEffect2_7: -1114203939
+      screenNeonEffect2_8: -1893179825
+      screenNeonEffect2_9: 1190511075
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
