@@ -7,6 +7,7 @@ public class ParabolicRobot : EnemyBase
     private float xVelocity;
     private int yDirection = 1;
     private SlowzoneActivator activator;
+
     protected override void Awake()
     {
         base.Awake();
@@ -18,17 +19,18 @@ public class ParabolicRobot : EnemyBase
     }
     void FixedUpdate()
     {
-        if(Random.Range(0f, 1f) < 0.025) yDirection = -yDirection;
-        if(rigid.position.y > 4f) yDirection = -1;
-        if(rigid.position.y < -4f) yDirection = 1;
+        if (Random.Range(0f, 1f) < 0.025) yDirection = -yDirection;
+        if (rigid.position.y > 4f) yDirection = -1;
+        if (rigid.position.y < -4f) yDirection = 1;
         rigid.velocity = new Vector2(xVelocity, yDirection * 3f);
     }
     protected override void OnDead()
     {
         activator?.Activate();
         base.OnDead();
+
     }
-   
+
     public override void SetSpeed(float multiplier)
     {
         xVelocity = -multiplier * Utils.GetBaseSpeed(MusicManager.Instance.bpm);
