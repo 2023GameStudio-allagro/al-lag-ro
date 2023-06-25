@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011b2d5eedcfa334da1d67be77467513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadEffectBlue: {fileID: 0}
-  deadEffectGreen: {fileID: 0}
   markUIPrefab: {fileID: 1099512028321634194, guid: 454a9cc8284921042b2cf6e504bc67c9,
     type: 3}
   healthItemPrefab: {fileID: 3488428918988242955, guid: 690a79f7fb9328c4489f2b69af9af22b,
+    type: 3}
+  deadSound: {fileID: 2755371078947545495, guid: e6576da506076bd49b0beafb3710a56f,
     type: 3}
 --- !u!95 &217045504385936921
 Animator:

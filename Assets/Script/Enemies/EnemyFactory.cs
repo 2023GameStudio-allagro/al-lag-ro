@@ -14,7 +14,7 @@ public class EnemyFactory : MonoBehaviour
     {
         switch (enemyType)
         {
-            case 'z': 
+            case 'z':
             case 'x': return normalEnemyPrefab;
             case 'c': return fastEnemyPrefab;
             case 'v': return tankEnemyPrefab;
