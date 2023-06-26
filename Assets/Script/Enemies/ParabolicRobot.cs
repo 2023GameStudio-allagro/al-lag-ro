@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ParabolicRobot : EnemyBase
 {
-    private float xVelocity;
     private int yDirection = 1;
     private SlowzoneActivator activator;
 
@@ -28,12 +27,5 @@ public class ParabolicRobot : EnemyBase
     {
         activator?.Activate();
         base.OnDead();
-
-    }
-
-    public override void SetSpeed(float multiplier)
-    {
-        xVelocity = -multiplier * Utils.GetBaseSpeed(MusicManager.Instance.bpm);
-        rigid.velocity = new Vector2(xVelocity, 0f);
     }
 }

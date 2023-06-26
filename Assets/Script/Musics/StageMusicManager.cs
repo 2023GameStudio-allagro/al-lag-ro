@@ -11,6 +11,7 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
     private UnityEvent<int> sharedBeatEvent;
     public UnityEvent<char> noteEvent { get {return sharedNoteEvent;} }
     public UnityEvent<int> beatEvent { get {return sharedBeatEvent;} }
+    public UnityEvent<char> spawnEvent;
 
     [SerializeField] private StageMusicSource[] sources;
     private StageMusicSource currentSource;
@@ -34,6 +35,7 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
 
         MakeBeatEvent(prevElapsedTime, elapsedTime);
         MakeNoteEvent(prevElapsedTime, elapsedTime);
+        MakeSpawnEvent(prevElapsedTime, elapsedTime);
         if(elapsedTime > 0f && !audioRunner.isPlaying)
         {
             isRunning = false;
@@ -45,6 +47,7 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
     {
         if(stageNo < 1 || stageNo > sources.Length) return;
         currentSource = sources[stageNo - 1];
+        currentSource.Initialize();
     }
 
     public void StartMusic()
@@ -86,17 +89,27 @@ public class StageMusicManager : MonoBehaviour, IMusicManager
     private void MakeNoteEvent(float prevTime, float curTime)
     {
         float bpm = currentSource.bpm;
-        float delay = Utils.GetBaseDuration(bpm);
+        float delay = 1f;
         
         if(IsMusicStampEnd(curTime + delay)) return;
         int prevBeatNo = GetBeatNo(prevTime + delay, bpm);
         int curBeatNo = GetBeatNo(curTime + delay, bpm);
         if(curBeatNo < 0) return;
 
-        if(prevBeatNo != curBeatNo && currentSource.HasNote(curBeatNo))
+        if(prevBeatNo != curBeatNo && currentSource.HasNote(curBeatNo)) noteEvent?.Invoke('z');
+    }
+
+    private void MakeSpawnEvent(float prevTime, float curTime)
+    {
+        float bpm = currentSource.bpm;
+        int prevBeatNo = GetBeatNo(prevTime, bpm);
+        int curBeatNo = GetBeatNo(curTime, bpm);
+        if(IsMusicStampEnd(curTime)) return;
+
+        if(prevBeatNo != curBeatNo)
         {
             char key = currentSource.GetNote(curBeatNo);
-            noteEvent?.Invoke(key);
+            if(key != '\0') spawnEvent?.Invoke(key);
         }
     }
 

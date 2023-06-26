@@ -9,6 +9,8 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
     protected Rigidbody2D rigid;
     private IEnemyMarker _markers;
     private EnemyMarkerUI markUI;
+    protected float xVelocity;
+    protected float speed;
 
     public List<AttackKey> markers
     {
@@ -87,7 +89,9 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
     }
     public virtual void SetSpeed(float multiplier)
     {
-        rigid.velocity = new Vector2(-multiplier * Utils.GetBaseSpeed(MusicManager.Instance.bpm), 0f);
+        speed = multiplier;
+        xVelocity = -speed * Utils.GetBaseSpeed(MusicManager.Instance.bpm);
+        rigid.velocity = new Vector2(xVelocity, 0f);
     }
 
     public bool CanDamage(AttackKey key)
@@ -107,6 +111,7 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
             OnDead();
             Destroy(gameObject);
         }
+        else Knockback();
     }
     public void AttackPlayer(Player player)
     {
@@ -119,5 +124,12 @@ public class EnemyBase : MonoBehaviour, IAttackable, IDamageable
         {
             Instantiate(healthItemPrefab, transform.position, Quaternion.identity);
         }
+    }
+    private void Knockback()
+    {
+        float knockbackDistance = Constants.BASE_ENEMY_DISTANCE / 8 * speed;
+        Vector2 toMove = rigid.position;
+        toMove.x += knockbackDistance;
+        rigid.MovePosition(toMove);
     }
 }

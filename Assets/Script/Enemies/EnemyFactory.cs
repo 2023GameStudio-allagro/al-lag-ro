@@ -36,8 +36,25 @@ public class EnemyFactory : MonoBehaviour
     {
         GameObject enemy = Instantiate(prefab);
         EnemyBase enemyBrain = enemy.GetComponent<EnemyBase>();
-        enemyBrain.SetMarker(new EnemyMarkerV2(enemyType));
-        enemyBrain.SetSpeed(1f);
+        enemyBrain.SetMarker(new EnemyMarkerV2(enemyType, GetEnemyHealth(enemyType)));
+        enemyBrain.SetSpeed(GetEnemySpeed(enemyType));
         return enemy;
+    }
+    private int GetEnemyHealth(char enemyType)
+    {
+        if(enemyType == 'v') return 2;
+        return 1;
+    }
+    private float GetEnemySpeed(char enemyType)
+    {
+        switch (enemyType)
+        {
+            case 'c': return 2f;
+            case 'v': return 0.5f;
+            case 'z':
+            case 'x': 
+            case 's': return 1f;
+        }
+        return 1f;
     }
 }
