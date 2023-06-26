@@ -23,12 +23,15 @@ public class EnemyMarkerV2 : IEnumerable<AttackKey>, IEnemyMarker
         }
     }
 
-    public EnemyMarkerV2(char enemyType)
+    public EnemyMarkerV2(char enemyType, int health = 1)
     {
-        markers = new AttackKey[1];
-        markers[0] = GetMarker(enemyType);
+        markers = new AttackKey[health];
+        for(int i=0; i<health; i++)
+        {
+            markers[i] = GetMarker(enemyType);
+        }
         start = 0;
-        end = 1;
+        end = health;
     }
 
     public void Decrease(int amount)

@@ -9,7 +9,7 @@ public class JudgeLineCreator : MonoBehaviour
 
     public void OnNoteReceived()
     {
-        StartCoroutine(DelayedMakeNote());
+        MakeNote();
     }
 
     public Judgement HitNote()
